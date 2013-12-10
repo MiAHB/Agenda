@@ -1,0 +1,125 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AgregarContactos" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:inputType="text"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"            
+                android:text="@string/apellidos"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/txtApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black" 
+                android:background="@android:color/white"
+                android:inputType="text"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/GroupSexo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                  
+                    android:text="@string/sexo"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/Hombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                 
+                    android:text="@string/sexoHombre"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/rdHombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexoMujer"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/chkDeportes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aficionDeportes"
+                android:textColor="@android:color/white" />
+
+            <CheckBox
+                android:id="@+id/chkCocina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aficionCocina" 
+                android:textColor="@android:color/white" />
+
+            <CheckBox
+                android:id="@+id/chkInformatica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aficionInformatica" 
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAgregar"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+</FrameLayout>
