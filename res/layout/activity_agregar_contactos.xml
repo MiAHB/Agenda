@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,12 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AgregarContactos" >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+    tools:context=".AgregarContactosActivity" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,38 +53,91 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginBottom="12dp" />
         </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"            
+                android:text="@string/telefono"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black" 
+                android:background="@android:color/white"
+                android:inputType="phone"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"            
+                android:text="@string/email"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black" 
+                android:background="@android:color/white"
+                android:inputType="textEmailAddress"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <TextView
+               	android:layout_width="wrap_content"
+               	android:layout_height="wrap_content"                  
+                android:text="@string/sexo"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+            
             <RadioGroup
-                android:id="@+id/GroupSexo"
+                android:id="@+id/rdGroupSexo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"                  
-                    android:text="@string/sexo"
-                    android:textColor="@android:color/white" />
-
                 <RadioButton
-                    android:id="@+id/Hombre"
+                    android:id="@+id/rdHombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"                 
                     android:text="@string/sexoHombre"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:checked="true" />
 
                 <RadioButton
-                    android:id="@+id/rdHombre"
+                    android:id="@+id/rdMujer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sexoMujer"
                     android:textColor="@android:color/white" />
             </RadioGroup>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+        	<TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textStyle="bold"
+            	android:text="@string/aficiones"
+            	android:textColor="@android:color/white" />
 
             <CheckBox
                 android:id="@+id/chkDeportes"
@@ -113,13 +161,25 @@
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnAgregar"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btnAgregar"
-            android:layout_gravity="right" />
+            android:orientation="horizontal"
+            android:gravity="right" >
+	        <Button
+	            android:id="@+id/btnAceptar"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/btnAceptar"
+	            android:paddingLeft="20dp"
+	            android:paddingRight="20dp" />
+	        <Button
+	            android:id="@+id/btnCancelar"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/btnCancelar"
+	            android:paddingLeft="20dp"
+	            android:paddingRight="20dp" />
+	    </LinearLayout>
 
-    </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>
